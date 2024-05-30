@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, watch } from "vue";
+import { ref, watch } from "vue";
 import { RateRequest } from "@/api/index";
 interface result {
   discount: number;
@@ -79,7 +79,7 @@ const getSearch = async () => {
 
 watch(
   () => num.value,
-  (newVal, oldVal) => {
+  (newVal) => {
     if (newVal >= 100) {
       num.value = 100;
     }
@@ -146,7 +146,7 @@ watch(
       .right button {
         width: 32px;
         height: 32px;
-        border: 1px solid #f4f4f4;
+        border: 1px solid #d8d8d8;
         display: flex;
         justify-content: center;
         align-items: center;
